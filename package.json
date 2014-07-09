@@ -1,7 +1,7 @@
 {
   "name": "local-nodeapi",
-  "version": "0.0.1",
-  "description": "See NodeJS api local",
+  "version": "0.0.2",
+  "description": "View NodeJS api local",
   "bin": {
     "local-nodeapi": "cli.js"
   },
@@ -14,8 +14,9 @@
   },
   "keywords": [
     "cli",
-    "bin",
-    "lines"
+    "node",
+    "api",
+    "local"
   ],
   "author": "light",
   "license": "MIT",

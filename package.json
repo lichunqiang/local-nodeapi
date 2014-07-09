@@ -1,0 +1,38 @@
+{
+  "name": "local-nodeapi",
+  "version": "0.0.1",
+  "description": "See NodeJS api local",
+  "bin": {
+    "local-nodeapi": "cli.js"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lichunqiang/local-nodeapi"
+  },
+  "keywords": [
+    "cli",
+    "bin",
+    "lines"
+  ],
+  "author": "light",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lichunqiang/local-nodeapi/issues"
+  },
+  "homepage": "https://github.com/lichunqiang/local-nodeapi",
+  "devDependencies": {
+    "mocha": "^1.20.1",
+    "should": "^4.0.4"
+  },
+  "dependencies": {
+    "colors": "^0.6.2",
+    "connect": "^3.0.1",
+    "minimist": "^0.2.0",
+    "open": "0.0.5",
+    "replace": "^0.2.9",
+    "serve-static": "^1.3.0"
+  }
+}

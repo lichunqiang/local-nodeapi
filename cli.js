@@ -11,21 +11,20 @@ var argv = require('minimist')(process.argv.slice(2), {
   string: 'port',
   default: {
     'port': 8000
-  }	
+  }
 });
 
-var colors = require('colors');
+var chalk = require('chalk');
 var pkg = require('./package.json');
-var input = argv._[0];
 
 var FILE_PATH = __dirname + '/node_apidoc/';
 
 function help() {
 	console.log([
 		'',
-		pkg.description.grey,
+		chalk.grey(pkg.description),
 		'',
-		'Usage'.green,
+		chalk.green('Usage'),
 		'  $ local-nodeapi',
 		'  $ local-nodeapi -p8001',
 		'',
@@ -37,7 +36,7 @@ if(argv.h || argv.help) {
 }
 
 if(argv.v || argv.V || argv.version) {
-	return console.log(pkg.version.green)
+	return console.log(chalk.green(pkg.version));
 }
 
 
@@ -56,26 +55,26 @@ var getIPAddress = function () {
       }
     });
   }
-  return ip || "127.0.0.1";
+  return ip || '127.0.0.1';
 };
 
 var setHeaders = function(res, path){
-	res.setHeader("Access-Control-Allow-Origin", "*");
+	res.setHeader('Access-Control-Allow-Origin', '*');
 };
 
 var app = connect();
 app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 });
-app.use(serveStatic(FILE_PATH, { 
+app.use(serveStatic(FILE_PATH, {
 	'index': '_toc.html',
 	'setHeaders': setHeaders
 }));
-var port = argv.port || 8000
+var port = argv.port || 8000;
 
 app.listen(port, function () {
-  var url = "http://" + getIPAddress() + ":" + port;
-  console.log("Running at ".green + url.cyan);
+  var url = 'http://' + getIPAddress() + ':' + port;
+  console.log(chalk.green('Running at ') + chalk.cyan(url));
   open(url);
 });

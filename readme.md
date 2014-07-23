@@ -15,7 +15,7 @@ This is inspired by [anywhere](https://github.com/JacksonTian/anywhere).
 local-nodeapi
 ```
 
-* OR
+* or
 
 ```
 local-nodeapi -p 8001

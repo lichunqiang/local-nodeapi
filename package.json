@@ -1,6 +1,6 @@
 {
   "name": "local-nodeapi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "View NodeJS api local",
   "bin": {
     "local-nodeapi": "cli.js"

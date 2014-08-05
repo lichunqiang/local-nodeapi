@@ -13,20 +13,20 @@ This is inspired by [anywhere](https://github.com/JacksonTian/anywhere).
 
 ## Usage
 
-```
-local-nodeapi
+```sh
+$ local-nodeapi
 ```
 
 * or
 
-```
-local-nodeapi -p 8001
+```sh
+$ local-nodeapi -p 8001
 ```
 
 * More
 
-```
-local-nodeapi --help
+```sh
+$ local-nodeapi --help
 ```
 
 ## License

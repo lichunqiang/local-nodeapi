@@ -1,7 +1,9 @@
 Just view Node api locally
 ------------
 
-[![NPM](https://nodei.co/npm/local-nodeapi.png?downloads=true&stars=true)](https://nodei.co/npm/local-nodeapi/)
+[![Version][version]](https://npmjs.org/package/local-nodeapi)
+[![Dependency Status][deps]](https://david-dm.org/lichunqiang/local-nodeapi)
+[![Downloads][downloads]](https://npmjs.org/package/local-nodeapi)
 
 This is inspired by [anywhere](https://github.com/JacksonTian/anywhere).
 
@@ -11,22 +13,26 @@ This is inspired by [anywhere](https://github.com/JacksonTian/anywhere).
 
 ## Usage
 
-```
-local-nodeapi
+```sh
+$ local-nodeapi
 ```
 
-* OR
+* or
 
-```
-local-nodeapi -p 8001
+```sh
+$ local-nodeapi -p 8001
 ```
 
 * More
 
-```
-local-nodeapi --help
+```sh
+$ local-nodeapi --help
 ```
 
 ## License
 
 MIT
+
+[version]: http://img.shields.io/npm/v/local-nodeapi.svg?style=flat
+[deps]: http://img.shields.io/david/lichunqiang/local-nodeapi.svg?style=flat
+[downloads]: http://img.shields.io/npm/dm/local-nodeapi.svg?style=flat

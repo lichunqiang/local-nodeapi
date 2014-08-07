@@ -1,6 +1,6 @@
 {
   "name": "local-nodeapi",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "View NodeJS api local",
   "bin": {
     "local-nodeapi": "cli.js"
@@ -27,7 +27,7 @@
   "devDependencies": {
     "mocha": "^1.20.1",
     "should": "^4.0.4",
-    "replace": "^0.2.9",
+    "replace": "^0.2.9"
   },
   "dependencies": {
     "chalk": "^0.5.1",

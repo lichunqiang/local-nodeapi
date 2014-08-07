@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 var os = require('os');
-var open = require('open');
+var open = require('opn');
 var connect = require('connect');
 var serveStatic = require('serve-static');
 var argv = require('minimist')(process.argv.slice(2), {
@@ -14,7 +14,7 @@ var argv = require('minimist')(process.argv.slice(2), {
   }	
 });
 
-var colors = require('colors');
+var chalk = require('chalk');
 var pkg = require('./package.json');
 var input = argv._[0];
 
@@ -23,9 +23,9 @@ var FILE_PATH = __dirname + '/node_apidoc/';
 function help() {
 	console.log([
 		'',
-		pkg.description.grey,
+		chalk.grey(pkg.description),
 		'',
-		'Usage'.green,
+		chalk.green('Usage'),
 		'  $ local-nodeapi',
 		'  $ local-nodeapi -p8001',
 		'',
@@ -37,7 +37,7 @@ if(argv.h || argv.help) {
 }
 
 if(argv.v || argv.V || argv.version) {
-	return console.log(pkg.version.green)
+	return console.log(chalk.green(pkg.version));
 }
 
 
@@ -76,6 +76,6 @@ var port = argv.port || 8000
 
 app.listen(port, function () {
   var url = "http://" + getIPAddress() + ":" + port;
-  console.log("Running at ".green + url.cyan);
+  console.log(chalk.green("Running at ") + chalk.cyan(url));
   open(url);
 });
